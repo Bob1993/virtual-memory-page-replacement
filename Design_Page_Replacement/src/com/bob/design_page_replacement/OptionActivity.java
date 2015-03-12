@@ -62,7 +62,16 @@ public class OptionActivity extends Activity implements OnClickListener {
 			temp += random.nextInt(10) + " ";
 		}
 		Algorithm.init(temp);// 初始化
-		Toast.makeText(OptionActivity.this, "已成功生成访问序列", 0).show();
+		Toast.makeText(OptionActivity.this, "已成功生成访问序列", Toast.LENGTH_SHORT).show();
+	}
+	
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+		Intent intent = new Intent(OptionActivity.this, MainActivity.class);
+		startActivity(intent);
+		finish();// 结束当前活动
 	}
 
 }
