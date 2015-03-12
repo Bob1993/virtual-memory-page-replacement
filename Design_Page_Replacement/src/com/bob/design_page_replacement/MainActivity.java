@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.main_activity);
-		current_array= (TextView) findViewById(R.id.current_array);
+		current_array = (TextView) findViewById(R.id.current_array);
 		mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
 		mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);// 为布局传入图片和文字
 		mCircleMenuLayout// 设置监听事件
@@ -59,12 +59,11 @@ public class MainActivity extends Activity {
 					}
 				});
 		show();
-		
+
 	}
-	
-	public void show()
-	{
-		current_array.setText("当前访问序列:\n"+Algorithm.strs);
+
+	public void show() {
+		current_array.setText("当前访问序列:\n" + Algorithm.strs);
 	}
 
 }
