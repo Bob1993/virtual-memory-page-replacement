@@ -22,7 +22,7 @@
                 android:layout_width="104.0dip"
                 android:layout_height="104.0dip"
                 android:layout_centerInParent="true"
-                android:background="@drawable/compass" />
+                android:background="@drawable/center_alg" />
 
             <ImageView
                 android:layout_width="116.0dip"

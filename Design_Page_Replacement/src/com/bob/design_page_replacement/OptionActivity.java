@@ -47,8 +47,9 @@ public class OptionActivity extends Activity implements OnClickListener {
 				Algorithm.init(ed_input.getText().toString());
 			}
 
-			Intent intent = new Intent(OptionActivity.this, MainActivity.class);
-			startActivity(intent);
+			//Intent intent = new Intent(OptionActivity.this, MainActivity.class);
+			//startActivity(intent);
+			setResult(RESULT_OK);
 			finish();// 结束当前活动
 		}
 		}
@@ -69,8 +70,9 @@ public class OptionActivity extends Activity implements OnClickListener {
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
 		super.onBackPressed();
-		Intent intent = new Intent(OptionActivity.this, MainActivity.class);
-		startActivity(intent);
+		//Intent intent = new Intent(OptionActivity.this, MainActivity.class);
+		setResult(RESULT_OK);//在这里没有需要返回的数据，因此就不需要使用intent了
+		//startActivity(intent);
 		finish();// 结束当前活动
 	}
 

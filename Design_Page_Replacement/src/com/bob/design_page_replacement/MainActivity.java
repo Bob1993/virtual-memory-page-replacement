@@ -54,12 +54,19 @@ public class MainActivity extends Activity {
 					public void itemCenterClick(View view) {
 						Intent intent = new Intent(MainActivity.this,
 								OptionActivity.class);
-						startActivity(intent);
-						finish();
+						startActivityForResult(intent, 1);
+						//finish();
 					}
 				});
 		show();
 
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);	
+		show();//在这里因为是辅助优化活动栈的作用，就不对requestCode和resultCode进行判断了，可以直接show一下
 	}
 
 	public void show() {
