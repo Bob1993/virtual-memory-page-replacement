@@ -69,7 +69,7 @@ public class OptionActivity extends Activity implements OnClickListener {
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
-		super.onBackPressed();
+		//super.onBackPressed();//不必调用，因为finish我们自己已经写了一遍了
 		//Intent intent = new Intent(OptionActivity.this, MainActivity.class);
 		setResult(RESULT_OK);//在这里没有需要返回的数据，因此就不需要使用intent了
 		//startActivity(intent);
